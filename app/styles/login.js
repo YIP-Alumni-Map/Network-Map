@@ -5,7 +5,7 @@ module.exports = {
     flexWrap: 'wrap'
   }),
   fields: ({ theme }) => ({
-    ...theme.typography.label,
+    // ...theme.typography.label,
     minHeight: theme.space[6],
     justifyContent: 'space-around',
     width: '75%',
@@ -15,7 +15,7 @@ module.exports = {
     width: '75%',
   }),
   completion: ({ theme }) => ({
-    ...theme.typography.body1,
+    // ...theme.typography.body1,
     textAlign: 'left'
   }),
   bottomButtons: ({}) => ({
@@ -23,7 +23,7 @@ module.exports = {
     justifyContent: 'space-between'
   }),
   email: ({theme: {typography}}) => ({
-    ...typography.body2,
+    // ...typography.body2,
     display: 'flex',
     justifyContent: 'center'
   })

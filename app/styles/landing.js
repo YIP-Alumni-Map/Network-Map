@@ -10,7 +10,7 @@ module.exports = {
     minWidth: theme.space[8],
   }),
   header: ({ theme: {space, typography} }) => ({
-    ...typography.display1,
+    // ...typography.display1,
     textAlign: 'center',
     padding: space[4]
   }),
