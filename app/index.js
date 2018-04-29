@@ -1,4 +1,4 @@
-require('babel-polyfill')
+// require('babel-polyfill')
 
 localStorage.setItem('debug', true)
 
