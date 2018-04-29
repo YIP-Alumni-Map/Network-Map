@@ -1,3 +1,5 @@
+require('babel-polyfill')
+
 localStorage.setItem('debug', true)
 
 const config = require('../config')

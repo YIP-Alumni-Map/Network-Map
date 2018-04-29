@@ -58,6 +58,7 @@
     "@feathersjs/socketio": "^3.2.1",
     "@feathersjs/socketio-client": "^1.1.0",
     "ajv": "^6.4.0",
+    "babel-polyfill": "^6.26.0",
     "bankai": "github:choojs/bankai#7c6e07880b11d9486ce5ef8cb55fdfad7b946bbd",
     "compression": "^1.7.2",
     "cors": "^2.8.4",
@@ -95,7 +96,10 @@
     "server-summary": "^6.1.0",
     "socket.io-client": "^2.1.0",
     "static-module": "^2.2.4",
-    "string-to-stream": "^1.1.0"
+    "string-to-stream": "^1.1.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
   },
   "devDependencies": {
     "budo": "^11.2.0",

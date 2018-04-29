@@ -22,7 +22,7 @@ const Service = () => ({
     const { userId } = options
 
     const user = await users.get(userId)
-    const setupUrl = `${assetUrl}/onboarding/1?token=${encodeURIComponent(user.token)}`
+    const setupUrl = `${assetUrl}/onboarding/0?token=${encodeURIComponent(user.token)}`
 
     await this.workerQueue.enqueue(
       'mailer',
@@ -44,12 +44,12 @@ function createHtml ({ assetUrl, log, setupUrl, theme, user }) {
   const output = mjml2html(`
 <mjml>
   <mj-body>
-    <mj-section background-color="${theme.colors.primary.main}">
+    <mj-section background-color="${theme.palette.primary.main}">
       <mj-column>
         <mj-text
           font-style="bold"
           font-size="40px"
-          color="${theme.colors.primary.contrastText}"
+          color="${theme.palette.primary.contrastText}"
         >
           YIP Alumni Network
         </mj-text>
@@ -61,12 +61,12 @@ function createHtml ({ assetUrl, log, setupUrl, theme, user }) {
       vertical-align="middle"
       background-width="600px"
       background-height="469px"
-      background-color="${theme.colors.greys[1]}"
+      background-color="${theme.palette.greys[1]}"
       padding="100px 0px"
     >
       <mj-text
         padding="20px"
-        color="${theme.colors.secondary.dark}"
+        color="${theme.palette.secondary.dark}"
         font-family="Helvetica"
         align="center"
         font-size="80px"
@@ -78,8 +78,8 @@ function createHtml ({ assetUrl, log, setupUrl, theme, user }) {
       <mj-button
         href="${setupUrl}"
         align="center"
-        background-color="${theme.colors.secondary.main}"
-        color="${theme.colors.secondary.contrastText}"
+        background-color="${theme.palette.secondary.main}"
+        color="${theme.palette.secondary.contrastText}"
         font-size="30px"
         line-height="30px"
         font-weight="900"
