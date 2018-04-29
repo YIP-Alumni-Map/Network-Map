@@ -88,10 +88,8 @@ function LoginEmailSent (props) {
 function LoginEmailForm (props) {
   const {
     styles,
-    handleSubmit,
     doSubmitOnboardingStart: doSubmit
   } = props
-  console.log(doSubmit, 'dooo it?')
   return (
     h(Form, {
       onSubmit: doSubmit,

@@ -1,7 +1,7 @@
 const steps = [
   {
-    label:  'personal info',
-    Component: () => null
+    label: 'personal info',
+    Component: require('../components/personal')
   },
   {
     label:  'locations',
