@@ -12,6 +12,7 @@ module.exports = function PersonalDetailsForm (props) {
     doSubmitOnboardingStep: doSubmit,
     styles
   } = props
+  console.log(styles, 'styles')
   return (
     h(Paper, {
       classes: {

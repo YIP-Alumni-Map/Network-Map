@@ -18,6 +18,7 @@ module.exports = {
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
+    lineHeight: 1.6,
     display4: {
       fontSize: '112px',
       fontWeight: 400,
@@ -59,21 +60,21 @@ module.exports = {
       fontSize: '24px',
       fontWeight: 400,
       fontFamily: '\'Work Sans\', \'Helvetica\', \'Arial\', sans-serif',
-      lineHeight: 1,
+      lineHeight: 1.6,
       color: 'rgba(0, 0, 0, 0.87)'
     },
     subheading: {
       fontSize: '16px',
       fontWeight: 400,
       fontFamily: '\'Raleway\', \'Helvetica\', \'Arial\', sans-serif',
-      lineHeight: 1,
+      lineHeight: 1.4,
       color: 'rgba(0, 0, 0, 0.87)'
     },
     body2: {
       fontSize: '16px',
       fontWeight: 600,
       fontFamily: '\'Raleway\', \'Helvetica\', \'Arial\', sans-serif',
-      lineHeight: '20px',
+      lineHeight: 1.6,
       color: 'rgba(0, 0, 0, 0.87)'
     },
     body1: {

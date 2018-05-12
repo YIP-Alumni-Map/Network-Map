@@ -32,8 +32,7 @@ function Onboarding (props) {
     doClearOnboardingSnackbar: doClearSnackbar
   } = props
 
-  return h(Paper, {
-    className: styles.container
+  return h('div', {
   }, [
     h(OnboardingStepper, {
       styles,
@@ -51,8 +50,10 @@ function Onboarding (props) {
 
     step != null && (
       h(step.Component, {
+        styles,
         step,
-        stepIndex
+        stepIndex,
+        doSubmitOnboardingStep: (value) => console.log(value, 'yes!')
       })
     )
   ])
@@ -60,7 +61,6 @@ function Onboarding (props) {
 
 function OnboardingStepper (props) {
   const {
-    styles,
     stepIndex,
     steps
   } = props
