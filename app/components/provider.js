@@ -1,6 +1,7 @@
 const { Provider: StoreProvider } = require('redux-bundler-react')
 const { Provider: StyleProvider, ThemeProvider: StyleThemeProvider } = require('react-fela')
-const { createMuiTheme, MuiThemeProvider } = require('material-ui/styles')
+const MuiThemeProvider = require('material-ui/styles/MuiThemeProvider').default
+const createMuiTheme = require('material-ui/styles/createMuiTheme').default
 const h = require('react-hyperscript')
 
 module.exports = Provider
@@ -33,11 +34,5 @@ function Provider (props) {
 }
 
 function themeToMuiTheme (theme) {
-  const {
-    colors
-  } = theme
-
-  return createMuiTheme({
-    palette: colors
-  })
+  return createMuiTheme(theme)
 }

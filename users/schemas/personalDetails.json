@@ -1,0 +1,19 @@
+{
+  "title": "Personal Details",
+  "description": "Onboarding step 1",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "lastName": {
+      "type": "string",
+      "maxLength": 255
+    }
+  },
+  "required": [
+    "firstName",
+    "lastName"
+  ]
+}

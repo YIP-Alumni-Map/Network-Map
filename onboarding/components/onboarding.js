@@ -5,11 +5,9 @@ const { connect: connectStyles } = require('react-fela')
 const { connect: connectStore } = require('redux-bundler-react')
 const { default: Stepper, Step, StepLabel } = require('material-ui/Stepper')
 const Divider = require('material-ui/Divider').default
-const IconButton = require('material-ui/IconButton').default
-const Icon = require('material-ui/Icon').default
 const Paper = require('material-ui/Paper').default
-const Snackbar = require('material-ui/Snackbar').default
 
+const OnboardingSnackbar = require('./onboardingSnackbar')
 const styles = require('../styles/onboarding')
 const steps = require('../data/steps')
 
@@ -34,8 +32,7 @@ function Onboarding (props) {
     doClearOnboardingSnackbar: doClearSnackbar
   } = props
 
-  return h(Paper, {
-    className: styles.container
+  return h('div', {
   }, [
     h(OnboardingStepper, {
       styles,
@@ -53,8 +50,10 @@ function Onboarding (props) {
 
     step != null && (
       h(step.Component, {
+        styles,
         step,
-        stepIndex
+        stepIndex,
+        doSubmitOnboardingStep: (value) => console.log(value, 'yes!')
       })
     )
   ])
@@ -62,7 +61,6 @@ function Onboarding (props) {
 
 function OnboardingStepper (props) {
   const {
-    styles,
     stepIndex,
     steps
   } = props
@@ -85,30 +83,5 @@ function OnboardingStepper (props) {
         )
       })
     ])
-  )
-}
-
-function OnboardingSnackbar (props) {
-  const {
-    styles,
-    snackbar,
-    doClearSnackbar
-  } = props
-
-  return (
-    h(Snackbar, {
-      open: snackbar.message != null,
-      onClose: doClearSnackbar,
-      message: snackbar.message,
-      action: [
-        h(IconButton, {
-          key: 'close',
-          'aria-label': 'Close',
-          onClick: doClearSnackbar
-        }, [
-          h(Icon, 'close')
-        ])
-      ]
-    })
   )
 }

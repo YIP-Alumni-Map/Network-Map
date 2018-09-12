@@ -1,4 +1,4 @@
-# Network-Map 
+# Network-Map
 
 ## table of contents
 
@@ -41,6 +41,19 @@ npm run dev
   - land
   - login email
   - home page
+
+  -----------
+
+  Landing (route === /) 
+  !userIsAuthenticated
+  ? Component = Welcome + Send Login Email
+  : !userIsOnboarded
+  ? Component = Onboarding
+  : Component = Home
+
+  -----------
+
+  Profile
 
 ### data models
 
@@ -186,4 +199,3 @@ AGPL-3.0
 ### attributions
 
 - Emoji artwork is provided by [Twemoji](https://twitter.github.io/twemoji/) and is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
-

@@ -5,31 +5,13 @@ module.exports = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-
-    ':after': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      opacity: 0.5,
-      zIndex: -1,
-      backgroundColor: theme.colors.canvas,
-      // backgroundImage: 'url("/background.svg")',
-      // backgroundRepeat: 'repeat'
-    }
+    backgroundColor: theme.palette.canvas,
+    minHeight: theme.space[8],
+    minWidth: theme.space[8],
   }),
-  header: ({ theme }) => ({
-    display: 'flex',
-    minHeight: theme.space[7],
-    fontSize: theme.fontSizes[10],
-    padding: theme.space[4],
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    alignItems: 'center'
+  header: ({ theme: {space, typography} }) => ({
+    ...typography.display1,
+    textAlign: 'center',
+    padding: space[4]
   }),
-  startButton: ({ theme }) => ({
-    marginTop: `${theme.space[4]} !important`
-  })
 }

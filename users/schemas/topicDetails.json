@@ -1,0 +1,19 @@
+{
+  "title": "Topic Details",
+  "description": "Onboarding step 4",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 255
+    }
+  },
+  "required": [
+    "topic",
+    "description"
+  ]
+}

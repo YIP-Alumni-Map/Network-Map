@@ -1,20 +1,20 @@
 const steps = [
   {
-    label:  'start',
-    Component: require('../components/step-start')
+    label: 'personal info',
+    Component: require('../components/location')
   },
   {
-    label:  'setup',
-    Component: () => null
+    label: 'locations',
+    Component: () => require('../components/location')
   },
   {
-    label:  'pay',
-    Component: () => null
+    label: 'organisations',
+    Component: () => require('../components/organisations')
   },
   {
-    label:  'enjoy',
-    Component: () => null
-  }
+    label: 'topics',
+    Component: () => require('../components/topics')
+  },
 ]
 
 module.exports = steps

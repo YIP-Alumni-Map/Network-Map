@@ -12,6 +12,99 @@ module.exports = {
     desktopWide: '90em', // 1440px,
     desktopXL: '120em' // 1920px
   },
+  typography: {
+    fontFamily: '\'Raleway\', \'Helvetica\', \'Arial\', sans-serif',
+    fontSize: '16px',
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+    lineHeight: 1.6,
+    display4: {
+      fontSize: '112px',
+      fontWeight: 400,
+      fontFamily: '\'Work Sans\', \'Helvetica\', \'Arial\', sans-serif',
+      letterSpacing: '-.04em',
+      lineHeight: 1,
+      color: 'rgba(0, 0, 0, 0.54)'
+    },
+    display3: {
+      fontSize: '56px',
+      fontWeight: 400,
+      fontFamily: '\'Work Sans\', \'Helvetica\', \'Arial\', sans-serif',
+      letterSpacing: '-.02em',
+      lineHeight: 1.35,
+      color: '#000'
+    },
+    display2: {
+      fontSize: '1.00000em',
+      fontWeight: 600,
+      fontFamily: '\'Work Sans\', \'Helvetica\', \'Arial\', sans-serif',
+      lineHeight: '40px',
+      color: 'rgba(0, 0, 0, 0.54)'
+    },
+    display1: {
+      fontSize: '34px',
+      fontWeight: 400,
+      fontFamily: '\'Work Sans\', \'Helvetica\', \'Arial\', sans-serif',
+      lineHeight: '40px',
+      color: 'rgba(0, 0, 0, 0.54)'
+    },
+    headline: {
+      fontSize: '24px',
+      fontWeight: 600,
+      fontFamily: '\'Work Sans\', \'Helvetica\', \'Arial\', sans-serif',
+      lineHeight: '32px',
+      color: 'rgba(0, 0, 0, 0.87)'
+    },
+    title: {
+      fontSize: '24px',
+      fontWeight: 400,
+      fontFamily: '\'Work Sans\', \'Helvetica\', \'Arial\', sans-serif',
+      lineHeight: 1.6,
+      color: 'rgba(0, 0, 0, 0.87)'
+    },
+    subheading: {
+      fontSize: '16px',
+      fontWeight: 400,
+      fontFamily: '\'Raleway\', \'Helvetica\', \'Arial\', sans-serif',
+      lineHeight: 1.4,
+      color: 'rgba(0, 0, 0, 0.87)'
+    },
+    body2: {
+      fontSize: '16px',
+      fontWeight: 600,
+      fontFamily: '\'Raleway\', \'Helvetica\', \'Arial\', sans-serif',
+      lineHeight: 1.6,
+      color: 'rgba(0, 0, 0, 0.87)'
+    },
+    body1: {
+      fontSize: '16px',
+      fontWeight: 400,
+      fontFamily: '\'Raleway\', \'Helvetica\', \'Arial\', sans-serif',
+      lineHeight: '20px',
+      color: 'rgba(0, 0, 0, 0.87)'
+    },
+    label: {
+      fontSize: '16px',
+      fontWeight: 400,
+      fontFamily: '\'Raleway\', \'Helvetica\', \'Arial\', sans-serif',
+      lineHeight: '20px',
+      color: 'rgba(0, 0, 0, 0.54)'
+    },
+    caption: {
+      fontSize: '12px',
+      fontWeight: 400,
+      fontFamily: '\'Raleway\', \'Helvetica\', \'Arial\', sans-serif',
+      lineHeight: 1,
+      color: 'rgba(0, 0, 0, 0.87)'
+    },
+    button: {
+      fontSize: '14px',
+      textTransform: 'uppercase',
+      fontWeight: 600,
+      fontFamily: '\'Work Sans\', \'Helvetica\', \'Arial\', sans-serif'
+    }
+  },
   space: [
     // http://tachyons.io/docs/layout/spacing/
     '0rem', // [0] SR: to override default allofthespace with noneofthespace
@@ -22,60 +115,21 @@ module.exports = {
     '4rem', // [5]
     '8rem', // [6]
     '16rem', // [7]
-    '32rem' // [8]
+    '32rem', // [8]
+    '48rem', // [9]
+    '64rem', // [9]
+    '72rem', // [10]
   ],
-  fontSizes: {
-    // typographic scale because
-    // http://spencermortensen.com/articles/typographic-scale/
-    // and
-    // https://blog.madewithenvy.com/responsive-typographic-scales-in-css-b9f60431d1c4
-    //
-    // px and pt values are based on a 1 em parent element with 16px (12pt) root size.
-    // http://pxtoem.com/
-    '-5': '0.50000em', // 8px, 6pt
-    '-4': '0.57435em',
-    '-3': '0.65975em',
-    '-2': '0.75785em',
-    '-1': '0.87055em',
-    0: '1.00000em', // 16px, 12pt
-    1: '1.14869em',
-    2: '1.31951em',
-    3: '1.51572em', // 24px, 18pt
-    4: '1.74110em',
-    5: '2.00000em', // 32px, 24pt
-    6: '2.29740em',
-    7: '2.63902em',
-    8: '3.03143em', // 48px, 36pt
-    9: '3.48220em',
-    10: '4.00000em', // 64px, 48pt
-    11: '4.59479em',
-    12: '5.27803em',
-    13: '6.06287em', // 96px, 52pt
-    14: '6.96440em',
-    15: '8.00000em', // 128px, 96pt
-    16: '9.18959em',
-    17: '10.55606em',
-    18: '12.12573em',
-    19: '13.92881em',
-    20: '16.00000em' // 256px, 192pt
-    // continue with formula:
-    //   multiplier ^ (step / interval)
-    //   2 ^ (step / 5)
-  },
-  fonts: {
-    primary: 'Roboto, sans-serif',
-    logo: ''
-  },
-  colors: {
+  palette: {
     primary: {
-      light: orange[400],
-      main: orange[700],
-      dark: orange[900],
+      light: orange.A200,
+      main: '#F47921',
+      dark: orange[800],
       contrastText: grey[50]
     },
     secondary: {
       light: green[300],
-      main: green[600],
+      main: '#47AB48',
       dark: green[900],
       contrastText: grey[50]
     },

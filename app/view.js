@@ -12,7 +12,7 @@ module.exports = view
 
 function view ({ config, store }) {
   const styleRenderer = createStyleRenderer()
-  addStyleSheet('https://fonts.googleapis.com/css?family=Roboto:300,400,500')
+  addStyleSheet('https://fonts.google.com/specimen/Work+Sans?selection.family=Raleway:400,600|Work+Sans:400,600')
   addStyleSheet('https://fonts.googleapis.com/icon?family=Material+Icons')
   addStyleSheet('https://afeld.github.io/emoji-css/emoji.css')
 

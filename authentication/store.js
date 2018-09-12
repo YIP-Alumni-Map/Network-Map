@@ -25,6 +25,15 @@ module.exports = {
             isAuthenticating: false
           }
         )
+      } else if (type == 'AUTHENTICATION_SIGNOUT') {
+        return merge(
+          state,
+          {
+            userId: undefined,
+            error: null,
+            isAuthenticating: false
+          }
+        )
       } else if (type == 'AUTHENTICATION_FAILED') {
         return merge(
           state,
@@ -55,6 +64,11 @@ module.exports = {
         dispatch({ type: 'AUTHENTICATION_FAILED', error })
         return client.logout()
       })
+  },
+  doSignout: () => ({ dispatch, client }) => {
+    dispatch({ type: 'AUTHENTICATION_SIGNOUT' })
+    dispatch({ actionCreator: 'doUpdateUrl', args: ['/'] })
+    return client.logout()
   },
   doAuthenticateTokenAndSetUrl: ({ accessToken, url }) => ({ dispatch }) => {
     dispatch({

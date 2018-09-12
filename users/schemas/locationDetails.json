@@ -1,0 +1,19 @@
+{
+  "title": "Location Details",
+  "description": "Onboarding step 2",
+  "type": "object",
+  "properties": {
+    "location": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "type": {
+      "type": "string",
+      "maxLength": 255
+    },
+  },
+  "required": [
+    "location",
+    "type"
+  ]
+}
